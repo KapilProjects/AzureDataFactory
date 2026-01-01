@@ -1,0 +1,118 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adfrabokj"
+		},
+		"AzureBlobStorage4fileCheck_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage4fileCheck'"
+		},
+		"DeleteFile_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'DeleteFile'"
+		},
+		"AzDataLakeRABOkjtest_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://stgaccrabokj.dfs.core.windows.net"
+		},
+		"AzureDataLakeStoragekj_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://stgaccrabokj.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabasekj_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sqldbrabokj.database.windows.net"
+		},
+		"AzureSqlDatabasekj_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbnamerabokj"
+		},
+		"linked_git_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com"
+		},
+		"managerTrigger_properties_typeProperties_scope": {
+			"type": "string",
+			"defaultValue": "/subscriptions/32a9c525-bb52-4eea-9193-b69d6ae4604d/resourceGroups/rg-usersandbox-kapilendrajamkiar/providers/Microsoft.Storage/storageAccounts/stgaccrabokj"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adfrabokj_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage4fileCheck_connectionString": {
+						"value": "[parameters('AzureBlobStorage4fileCheck_connectionString')]"
+					},
+					"DeleteFile_connectionString": {
+						"value": "[parameters('DeleteFile_connectionString')]"
+					},
+					"AzDataLakeRABOkjtest_properties_typeProperties_url": {
+						"value": "[parameters('AzDataLakeRABOkjtest_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStoragekj_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStoragekj_properties_typeProperties_url')]"
+					},
+					"AzureSqlDatabasekj_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabasekj_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabasekj_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabasekj_properties_typeProperties_database')]"
+					},
+					"linked_git_properties_typeProperties_url": {
+						"value": "[parameters('linked_git_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "adfrabokj_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"managerTrigger_properties_typeProperties_scope": {
+						"value": "[parameters('managerTrigger_properties_typeProperties_scope')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'adfrabokj_ArmTemplate_0')]"
+			]
+		}
+	]
+}

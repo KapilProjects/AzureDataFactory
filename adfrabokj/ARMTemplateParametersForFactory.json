@@ -1,0 +1,33 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adfrabokj"
+		},
+		"AzureBlobStorage4fileCheck_connectionString": {
+			"value": ""
+		},
+		"DeleteFile_connectionString": {
+			"value": ""
+		},
+		"AzDataLakeRABOkjtest_properties_typeProperties_url": {
+			"value": "https://stgaccrabokj.dfs.core.windows.net"
+		},
+		"AzureDataLakeStoragekj_properties_typeProperties_url": {
+			"value": "https://stgaccrabokj.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabasekj_properties_typeProperties_server": {
+			"value": "sqldbrabokj.database.windows.net"
+		},
+		"AzureSqlDatabasekj_properties_typeProperties_database": {
+			"value": "dbnamerabokj"
+		},
+		"linked_git_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com"
+		},
+		"managerTrigger_properties_typeProperties_scope": {
+			"value": "/subscriptions/32a9c525-bb52-4eea-9193-b69d6ae4604d/resourceGroups/rg-usersandbox-kapilendrajamkiar/providers/Microsoft.Storage/storageAccounts/stgaccrabokj"
+		}
+	}
+}
