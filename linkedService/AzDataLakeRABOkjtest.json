@@ -1,0 +1,11 @@
+{
+	"name": "AzDataLakeRABOkjtest",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://stgaccrabokj.dfs.core.windows.net"
+		}
+	}
+}

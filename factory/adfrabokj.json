@@ -1,0 +1,15 @@
+{
+	"name": "adfrabokj",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned,UserAssigned",
+		"principalId": "05c01144-e978-437f-be1b-e75a74f8e06d",
+		"tenantId": "ed5e8704-f323-45c3-8c25-41b87b7bc696",
+		"userAssignedIdentities": {
+			"/subscriptions/32a9c525-bb52-4eea-9193-b69d6ae4604d/resourcegroups/rg-usersandbox-kapilendrajamkiar/providers/Microsoft.ManagedIdentity/userAssignedIdentities/managed_identity_adf": {
+				"clientId": "dc13842a-b960-4ef5-a928-ab2c264b7211",
+				"principalId": "ea082f61-073d-4c14-98ad-8366aaa0f471"
+			}
+		}
+	}
+}

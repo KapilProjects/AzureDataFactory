@@ -1,0 +1,30 @@
+{
+	"name": "managerTrigger",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pipelinemanager",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "ProdPipeline",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/source/blobs/csvfiles/sales_",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/32a9c525-bb52-4eea-9193-b69d6ae4604d/resourceGroups/rg-usersandbox-kapilendrajamkiar/providers/Microsoft.Storage/storageAccounts/stgaccrabokj",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
