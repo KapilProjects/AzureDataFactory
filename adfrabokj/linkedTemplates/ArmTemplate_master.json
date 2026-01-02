@@ -7,6 +7,10 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adfrabokj"
 		},
+		"AzStorageDL_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzStorageDL'"
+		},
 		"AzureBlobStorage4fileCheck_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage4fileCheck'"
@@ -19,6 +23,10 @@
 			"type": "string",
 			"defaultValue": "https://stgaccrabokj.dfs.core.windows.net"
 		},
+		"AzStorageDL_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://stgaccrabokj.dfs.core.windows.net/"
+		},
 		"AzureDataLakeStoragekj_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://stgaccrabokj.dfs.core.windows.net/"
@@ -30,6 +38,10 @@
 		"AzureSqlDatabasekj_properties_typeProperties_database": {
 			"type": "string",
 			"defaultValue": "dbnamerabokj"
+		},
+		"HttplinkedService_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://github.com/"
 		},
 		"linked_git_properties_typeProperties_url": {
 			"type": "string",
@@ -66,6 +78,9 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"AzStorageDL_accountKey": {
+						"value": "[parameters('AzStorageDL_accountKey')]"
+					},
 					"AzureBlobStorage4fileCheck_connectionString": {
 						"value": "[parameters('AzureBlobStorage4fileCheck_connectionString')]"
 					},
@@ -75,6 +90,9 @@
 					"AzDataLakeRABOkjtest_properties_typeProperties_url": {
 						"value": "[parameters('AzDataLakeRABOkjtest_properties_typeProperties_url')]"
 					},
+					"AzStorageDL_properties_typeProperties_url": {
+						"value": "[parameters('AzStorageDL_properties_typeProperties_url')]"
+					},
 					"AzureDataLakeStoragekj_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStoragekj_properties_typeProperties_url')]"
 					},
@@ -83,6 +101,9 @@
 					},
 					"AzureSqlDatabasekj_properties_typeProperties_database": {
 						"value": "[parameters('AzureSqlDatabasekj_properties_typeProperties_database')]"
+					},
+					"HttplinkedService_properties_typeProperties_url": {
+						"value": "[parameters('HttplinkedService_properties_typeProperties_url')]"
 					},
 					"linked_git_properties_typeProperties_url": {
 						"value": "[parameters('linked_git_properties_typeProperties_url')]"

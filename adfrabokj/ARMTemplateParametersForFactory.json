@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "adfrabokj"
 		},
+		"AzStorageDL_accountKey": {
+			"value": ""
+		},
 		"AzureBlobStorage4fileCheck_connectionString": {
 			"value": ""
 		},
@@ -14,6 +17,9 @@
 		"AzDataLakeRABOkjtest_properties_typeProperties_url": {
 			"value": "https://stgaccrabokj.dfs.core.windows.net"
 		},
+		"AzStorageDL_properties_typeProperties_url": {
+			"value": "https://stgaccrabokj.dfs.core.windows.net/"
+		},
 		"AzureDataLakeStoragekj_properties_typeProperties_url": {
 			"value": "https://stgaccrabokj.dfs.core.windows.net/"
 		},
@@ -22,6 +28,9 @@
 		},
 		"AzureSqlDatabasekj_properties_typeProperties_database": {
 			"value": "dbnamerabokj"
+		},
+		"HttplinkedService_properties_typeProperties_url": {
+			"value": "https://github.com/"
 		},
 		"linked_git_properties_typeProperties_url": {
 			"value": "https://raw.githubusercontent.com"
